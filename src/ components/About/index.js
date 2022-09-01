@@ -1,8 +1,15 @@
 import React from "react";
+import coverImage from "../../assets/img/lync_photo_bw.jpg";
 
 const About = () => {
   return (
-    <div>
+    <section className="flex-row space-around">
+      <img
+        src={coverImage}
+        className="my-2"
+        style={{ width: "100px" }}
+        alt="cover"
+      />
       <h2>About Me</h2>
       <p>
         {" "}
@@ -12,7 +19,7 @@ const About = () => {
         seek to increase my understanding and pursue mastery of web development
         while providing services to local companies.
       </p>
-    </div>
+    </section>
   );
 };
 
