@@ -1,7 +1,7 @@
 import React from "react";
 import coverImage from "../../assets/img/lync_photo_bw.jpg";
 
-const About = () => {
+function About() {
   return (
     <section className="flex-row space-around">
       <img
