@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Nav() {
-  const categories = [{ name: "My Work" }, { name: "Resume" }];
-
+  const [categories] = useState([{ name: "My Work" }, { name: "Resume" }]);
   const handleClick = (item) => {
-    console.log(item);
     return item;
   };
 
