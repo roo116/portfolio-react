@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
-function Nav() {
-  const [categories] = useState([{ name: "My Work" }, { name: "Resume" }]);
-  const handleClick = (item) => {
-    return item;
-  };
+function Nav(props) {
+  const { categories = [], setCurrentCategory, currentCategory } = props;
+  useEffect(() => {
+    document.title = currentCategory.name;
+  }, [currentCategory]);
+
+  // const categories = useState([{ name: "My Work" }, { name: "Resume" }]);
+
+  // const handleClick = (item) => {
+  //   return item;
+  // };
 
   return (
     <header className="flex-row px-1">
@@ -15,19 +21,23 @@ function Nav() {
             <a
               data-testid="about"
               href="#about"
-              onClick={() => handleClick("About")}
             >
               About me
             </a>
           </li>
-          <li className={"mx-2"}>
-            <span onClick={() => handleClick("Contact")}>Contact</span>
+          <li className="mx-2">
+            <span>Contact</span>
           </li>
           {categories.map((category) => (
-            <li className="mx-1" key={category.name}>
+            <li
+              className={`mx-1 ${
+                currentCategory.name === category.name && "navActive"
+              }`}
+              key={category.name}
+            >
               <span
                 onClick={() => {
-                  handleClick(category.name);
+                  setCurrentCategory(category);
                 }}
               >
                 {category.name}
