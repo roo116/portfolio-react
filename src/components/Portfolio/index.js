@@ -47,7 +47,7 @@ function Portfolio() {
     },
   ];
   return (
-    <section id="portfolio">
+    <section className="my-5">
       <h1>My Work</h1>
       {projects.map((project, i) => (
         <div className="card" key={project.title}>

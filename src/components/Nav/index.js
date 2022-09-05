@@ -1,117 +1,61 @@
-/* eslint-disable */
 import React from "react";
-function Nav(props) {
-  const {
-    selections = [],
-    setCurrentSelection,
-    currentSelection,
-    setContactSelected,
-    contactSelected,
-  } = props;
 
+// Here we are using object destructuring assignment to pluck off our variables from the props object
+// We assign them to their own variable names
+function Nav({ currentPage, handlePageChange }) {
   return (
-    <header className="flex-row">
-      <h2>
-        <span>Chip Hill</span>
-      </h2>
-      <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a
-              data-testid="about"
-              href="#about"
-              onClick={() => setContactSelected(false)}
-            >
-              About me
-            </a>
-          </li>
-          <li className={`mx-2 ${contactSelected && "navActive"}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
-          </li>
-          {selections.map((selection) => (
-            <li
-              className={`mx-2 ${
-                currentSelection.name === selection.name &&
-                !contactSelected &&
-                "navActive"
-              }`}
-              key={selection.name}
-            >
-              <a href={selection.href}>{selection.name}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <header>
+      <h1>Chip Hill</h1>
+      <ul className="nav nav-tabs">
+        <li className="nav-item">
+          <a
+            href="#about"
+            onClick={() => handlePageChange("About")}
+            // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+            className={currentPage === "About" ? "nav-link active" : "nav-link"}
+          >
+            About
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            href="#contact"
+            onClick={() => handlePageChange("Contact")}
+            // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+            className={
+              currentPage === "Contact" ? "nav-link active" : "nav-link"
+            }
+          >
+            Contact
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            href="#portfolio"
+            onClick={() => handlePageChange("Portfolio")}
+            // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+            className={
+              currentPage === "Portfolio" ? "nav-link active" : "nav-link"
+            }
+          >
+            Portfolio
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            href="#resume"
+            onClick={() => handlePageChange("Resume")}
+            // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+            className={
+              currentPage === "Portfolio" ? "nav-link active" : "nav-link"
+            }
+          >
+            Resume
+          </a>
+        </li>
+      </ul>
     </header>
   );
 }
 
 export default Nav;
-
-// function Nav(props) {
-//   const { categories = [], setCurrentCategory, currentCategory } = props;
-//   useEffect(() => {
-//     document.title = currentCategory.name;
-//   }, [currentCategory]);
-
-//   // const categories = useState([{ name: "My Work" }, { name: "Resume" }]);
-
-//   // const handleClick = (item) => {
-//   //   console.log(item);
-//   //   return item;
-//   // };
-
-//   return (
-//     <header className="flex-row px-1">
-//       <h2>Chip Hill</h2>
-//       <nav>
-//         <ul className="flex-row">
-//           <li className="mx-2">
-//             <a data-testid="about" href="#about">
-//               About me
-//             </a>
-//           </li>
-//           <li className="mx-2">
-//             <span>Contact</span>
-//           </li>
-//           {categories.map((category) => (
-//             <li
-//               className={`mx-1 ${
-//                 currentCategory.name === category.name && "navActive"
-//               }`}
-//               key={category.name}
-//             >
-//               <span
-//                 onClick={() => {
-//                   setCurrentCategory(category);
-//                 }}
-//               >
-//                 {category.name}
-//               </span>
-//             </li>
-//           ))}
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// }
-
-/* <li className="mx-2"> */
-/* <a href="#about">About Me</a> */
-// </li>
-// <li className="mx-2">
-// <a href="#contact">Contact Me</a>
-// </li>
-// <li className="mx-2">
-// <a href="#portfolio">My Work</a>
-// </li>
-// <li className="mx-2">
-// <a href="#resume">My Resume</a>
-// </li>
-
-  // const selections = [
-  //   { name: "About Me", href: "#about" },
-  //   { name: "Contact Me", href: "#contact" },
-  //   { name: "Portfolio", href: "#portfolio" },
-  //   { name: "My Resume", href: "#resume" },
-  // ];
