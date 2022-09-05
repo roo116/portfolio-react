@@ -1,12 +1,14 @@
 /* eslint-disable */
 import React from "react";
-function Nav() {
-  const selections = [
-    { name: "About Me", href: "#about" },
-    { name: "Contact Me", href: "#contact" },
-    { name: "My Work", href: "#portfolio" },
-    { name: "My Resume", href: "#resume" },
-  ];
+function Nav(props) {
+  const {
+    selections = [],
+    setCurrentSelection,
+    currentSelection,
+    setContactSelected,
+    contactSelected,
+  } = props;
+
   return (
     <header className="flex-row">
       <h2>
@@ -14,8 +16,27 @@ function Nav() {
       </h2>
       <nav>
         <ul className="flex-row">
+          <li className="mx-2">
+            <a
+              data-testid="about"
+              href="#about"
+              onClick={() => setContactSelected(false)}
+            >
+              About me
+            </a>
+          </li>
+          <li className={`mx-2 ${contactSelected && "navActive"}`}>
+            <span onClick={() => setContactSelected(true)}>Contact</span>
+          </li>
           {selections.map((selection) => (
-            <li className="mx-2" key={selection.name}>
+            <li
+              className={`mx-2 ${
+                currentSelection.name === selection.name &&
+                !contactSelected &&
+                "navActive"
+              }`}
+              key={selection.name}
+            >
               <a href={selection.href}>{selection.name}</a>
             </li>
           ))}
@@ -87,3 +108,10 @@ export default Nav;
 // <li className="mx-2">
 // <a href="#resume">My Resume</a>
 // </li>
+
+  // const selections = [
+  //   { name: "About Me", href: "#about" },
+  //   { name: "Contact Me", href: "#contact" },
+  //   { name: "Portfolio", href: "#portfolio" },
+  //   { name: "My Resume", href: "#resume" },
+  // ];

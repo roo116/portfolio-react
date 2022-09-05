@@ -86,7 +86,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 header {
@@ -97,6 +97,10 @@ header {
 
 header a {
   color: var(--light);
+}
+
+header a:hover {
+  color: var(--secondary);
 }
 
 button {
@@ -150,8 +154,9 @@ li {
   list-style: none;
 }
 
-nav a:hover {
-  text-decoration: none;
+li:hover {
+  color: var(--secondary);
+  text-decoration:none;
 }
 
 nav li {
