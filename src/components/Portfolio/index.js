@@ -74,14 +74,3 @@ function Portfolio() {
 }
 
 export default Portfolio;
-
-
-//   <h1>title</h1>
-    //   <p>description</p>
-    //   <a href="" alt="">
-    //     GitHub
-    //   </a>
-    //   <a href="" alt="">
-    //     Application
-    //   </a>
-    // </section>
