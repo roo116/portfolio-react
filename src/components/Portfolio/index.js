@@ -48,7 +48,6 @@ function Portfolio() {
   ];
   return (
     <section id="projects">
-      <h1>My Work</h1>
       <div className="flex-row space-around">
         {projects.map((project, i) => (
           <div className="card" key={project.title}>
