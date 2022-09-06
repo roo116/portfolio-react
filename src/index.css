@@ -52,6 +52,7 @@ h6 {
 
 h1 {
   font-size: 2.25rem;
+  text-align: center;
 }
 
 h2 {
@@ -91,6 +92,11 @@ a:hover {
 
 header {
   background: var(--dark);
+  text-align: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
   /* background-image: url('./assets/img/profile2.bw.jpg');
   color: var(--dark) */
 }
@@ -101,6 +107,25 @@ header a {
 
 header a:hover {
   color: var(--secondary);
+}
+
+footer {
+  background-color: var(--dark);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  margin: auto;
+
+}
+
+footer a {
+  color: var(--light)
+}
+
+footer a:hover {
+  color: var(--secondary)
 }
 
 button {
@@ -156,7 +181,7 @@ li {
 
 li:hover {
   color: var(--secondary);
-  text-decoration:none;
+  text-decoration: none;
 }
 
 nav li {
@@ -168,6 +193,10 @@ textarea {
   height: 120px;
   border: 3px solid #cccccc;
   padding: 5px;
+}
+
+.border {
+  border: white solid 5px;
 }
 
 .container {
@@ -184,6 +213,14 @@ textarea {
 
 .space-between {
   justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
 }
 
 .flex-end {
@@ -236,8 +273,17 @@ textarea {
 }
 
 .card {
-  width: 25%;
-  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 11px;
+  width: 25rem;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  padding: 3px;
 }
 
 .img-thumbnail {
@@ -296,4 +342,9 @@ a {
 
 .navActive {
   color: var(--secondary);
+}
+
+#projects {
+  margin: 40px
+
 }

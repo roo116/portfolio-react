@@ -3,7 +3,7 @@ import coverImage from "../../assets/img/lync_photo_bw.jpg";
 
 function About() {
   return (
-    <section className="my-5">
+    <section className="my-5 border">
       <h1 id="about">About Me</h1>
       <img
         src={coverImage}

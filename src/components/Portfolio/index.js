@@ -47,26 +47,28 @@ function Portfolio() {
     },
   ];
   return (
-    <section className="my-5">
+    <section id="projects">
       <h1>My Work</h1>
-      {projects.map((project, i) => (
-        <div className="card" key={project.title}>
-          <div>
-            <img
-              src={require(`../../assets/img/project/${i}.jpg`).default}
-              alt={project.title}
-            />
+      <div className="flex-row space-around">
+        {projects.map((project, i) => (
+          <div className="card" key={project.title}>
+            <div>
+              <img
+                src={require(`../../assets/img/project/${i}.jpg`).default}
+                alt={project.title}
+              />
+            </div>
+            <h5>{project.title}</h5>
+            <p>{project.description}</p>
+            <a href={project.github} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a href={project.link} target="_blank" rel="noreferrer">
+              Application
+            </a>
           </div>
-          <h5>{project.title}</h5>
-          <p>{project.description}</p>
-          <a href={project.github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a href={project.link} target="_blank" rel="noreferrer">
-            Application
-          </a>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }

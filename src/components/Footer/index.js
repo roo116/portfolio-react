@@ -9,17 +9,17 @@ const Footer = () => {
     },
   ];
   return (
-    <section className="my-5">
-      <div class="text-center m-2">
-        <ul>
+    <footer className='border'>
+      <div className="text-center m-2">
+        <ul className="nav flex-row space-evenly" style={{ listStyle: "none", textDecoration: "none" }}>
           {links.map((link) => (
-            <li key={link.name}>
-              <a href={link.href}>{link.name}</a>
+            <li className="nav nav-item" key={link.name}>
+              <a href={link.href} className="mx-2 px-2">{link.name}</a>
             </li>
           ))}
         </ul>
       </div>
-    </section>
+    </footer>
   );
 };
 
