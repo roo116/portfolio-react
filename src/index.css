@@ -107,7 +107,7 @@ header a {
 }
 
 header a:hover {
-  color: var(--secondary);
+  color: skyblue;
 }
 
 footer {
@@ -126,7 +126,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--secondary);
+  color: skyblue;
 }
 
 button {
@@ -168,7 +168,7 @@ label {
 }
 
 .form-input {
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--dark);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
@@ -193,7 +193,7 @@ li {
 }
 
 li:hover {
-  color: var(--secondary);
+  color: skyblue;
   text-decoration: none;
 }
 
