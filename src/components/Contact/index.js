@@ -36,9 +36,9 @@ function ContactForm() {
   }
 
   return (
-    <section>
-      <h1>Contact me</h1>
+    <section id="contact-section">
       <form id="contact" onSubmit={handleSubmit}>
+        <h2 style={{textAlign:'center'}}>Contact me</h2>
         <div>
           <label htmlFor="name">Name:</label>
           <input

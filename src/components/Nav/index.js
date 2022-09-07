@@ -1,13 +1,15 @@
 import React from "react";
 
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
 function Nav({ currentPage, handlePageChange }) {
   return (
-    <header>
-      <h1>Chip Hill</h1>
-      <ul className="nav nav-tabs">
-        <li className="nav-item">
+    <header className="flex-row space-between">
+      <h1 className="mx-1 px-2 py-2">Chip Hill</h1>
+      {/* <ul className="nav nav-tabs flex-row space-evenly"> */}
+      <ul
+        className="nav flex-row space-around px-2 py-2"
+        style={{ listStyle: "none", textDecoration: "none" }}
+      >
+        <li className="nav-item mx-2">
           <a
             href="#about"
             onClick={() => handlePageChange("About")}
@@ -17,7 +19,7 @@ function Nav({ currentPage, handlePageChange }) {
             About
           </a>
         </li>
-        <li className="nav-item">
+        <li className="nav-item mx-2">
           <a
             href="#contact"
             onClick={() => handlePageChange("Contact")}
@@ -29,7 +31,7 @@ function Nav({ currentPage, handlePageChange }) {
             Contact
           </a>
         </li>
-        <li className="nav-item">
+        <li className="nav-item mx-2">
           <a
             href="#portfolio"
             onClick={() => handlePageChange("Portfolio")}
@@ -41,7 +43,7 @@ function Nav({ currentPage, handlePageChange }) {
             Portfolio
           </a>
         </li>
-        <li className="nav-item">
+        <li className="nav-item mx-2">
           <a
             href="#resume"
             onClick={() => handlePageChange("Resume")}
