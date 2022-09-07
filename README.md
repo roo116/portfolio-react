@@ -5,5 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Description
 This is my portfolio web-site.  Enjoy!!!
 
-link to portfolio - https://roo116.github.io/react-portfolio
+Doesn't work when hosting at gh-pages, so hosted from replit instead.
+
+link to portfolio - https://react-portfolio.roo116.repl.co/
 
