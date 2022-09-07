@@ -34,7 +34,7 @@ body {
   letter-spacing: 0.1em;
   background: var(--dark);
   color: var(--light);
-  background-image: url('./assets/img/profile2.bw.jpg');
+  background-image: url("./assets/img/profile2.bw.jpg");
   background-position: fixed;
   background-size: cover;
   font-family: "Courier New", Courier, monospace;
@@ -100,6 +100,7 @@ header {
   bottom: 0;
   /* background-image: url('./assets/img/profile2.bw.jpg');*/
   color: var(--dark);
+  border-bottom: #000000 solid;
 }
 
 header a {
@@ -111,22 +112,22 @@ header a:hover {
 }
 
 footer {
-  background-color: var(--dark);
+  background-color: var(--light);
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   opacity: 1;
   margin: auto;
-
+  border-top: #000000 solid;
 }
 
 footer a {
-  color: var(--light)
+  color: var(--dark);
 }
 
 footer a:hover {
-  color: var(--secondary)
+  color: var(--secondary);
 }
 
 button {
@@ -160,6 +161,8 @@ span[role="img"] {
 
 form {
   width: 40%;
+  margin: auto;
+  padding: 6px;
 }
 
 input {
@@ -190,7 +193,7 @@ nav li {
 }
 
 textarea {
-  width: 600px;
+  width: 548px;
   height: 120px;
   border: 3px solid #cccccc;
   padding: 5px;
@@ -282,8 +285,8 @@ textarea {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
   padding: 3px;
   color: var(--dark);
 }
@@ -331,6 +334,7 @@ button {
   font-weight: 600;
   margin-bottom: 30px;
   padding: 10px 15px;
+  align-items: center;
 }
 
 a {
@@ -347,6 +351,25 @@ a {
 }
 
 #projects {
-  margin: 40px
+  margin: 40px;
 }
 
+#about-section {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+#about-text {
+  margin: 20px;
+  padding: 5px;
+}
+
+#contact {
+  background-color: dimgray;
+  border: #000000 solid;
+}
+
+#contact-section {
+  margin-top: 55px;
+
+}
