@@ -38,13 +38,14 @@ function ContactForm() {
   return (
     <section id="contact-section">
       <form id="contact" onSubmit={handleSubmit}>
-        <h2 style={{textAlign:'center'}}>Contact me</h2>
+        <h2 style={{ textAlign: "center" }}>Contact me</h2>
         <div>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
             defaultValue={name}
             onChange={handleChange}
+            className="form-input"
             name="name"
           />
         </div>
@@ -54,6 +55,7 @@ function ContactForm() {
             type="text"
             defaultValue={email}
             onChange={handleChange}
+            className="form-input"
             name="email"
           />
         </div>
@@ -63,6 +65,7 @@ function ContactForm() {
             name="message"
             defaultValue={message}
             onChange={handleChange}
+            className="form-input"
             rows="5"
           />
         </div>

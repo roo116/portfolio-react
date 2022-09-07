@@ -57,14 +57,31 @@ function Portfolio() {
                 alt={project.title}
               />
             </div>
-            <h5>{project.title}</h5>
-            <p>{project.description}</p>
-            <a href={project.github} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-            <a href={project.link} target="_blank" rel="noreferrer">
-              Application
-            </a>
+            <h3 style={{ textAlign: "center" }}>{project.title}</h3>
+            <p className="card-body" style={{ justifyContent: "center" }}>
+              {project.description}
+            </p>
+            <div
+              className="card-links flex-column"
+              style={{ alignItems: "center" }}
+            >
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none", color: "dimgray" }}
+              >
+                GitHub
+              </a>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none", color: "dimgray" }}
+              >
+                Application
+              </a>
+            </div>
           </div>
         ))}
       </div>
