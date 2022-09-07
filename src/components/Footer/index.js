@@ -7,6 +7,10 @@ const Footer = () => {
       name: "Stack Overflow",
       href: "https://stackoverflow.com/users/18586610/chip-hill",
     },
+    {
+      name: "GitHub",
+      href: "https://github.com/roo116"
+    }
   ];
   return (
     <footer>

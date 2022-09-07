@@ -31,6 +31,7 @@ const Resume = () => {
               target="_blank"
               rel="noreferrer"
               className="m-2 p-1 text-light"
+              id="resume-link"
             >
               Download Resume
             </a>

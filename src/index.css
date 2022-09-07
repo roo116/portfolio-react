@@ -193,7 +193,6 @@ li {
 }
 
 li:hover {
-  color: skyblue;
   text-decoration: none;
 }
 
@@ -400,4 +399,8 @@ a {
 
 .resume-skills-list {
   margin: 1px;
+}
+
+#resume-link:hover {
+color:skyblue;
 }
