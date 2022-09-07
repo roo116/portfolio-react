@@ -4,7 +4,6 @@ function Nav({ currentPage, handlePageChange }) {
   return (
     <header className="flex-row space-between">
       <h1 className="mx-1 px-2 py-2">Chip Hill</h1>
-      {/* <ul className="nav nav-tabs flex-row space-evenly"> */}
       <ul
         className="nav flex-row space-around px-2 py-2"
         style={{ listStyle: "none", textDecoration: "none" }}
